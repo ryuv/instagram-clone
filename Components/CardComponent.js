@@ -20,7 +20,7 @@ import { View,
         const {img} = this.props;
 
         return (
-            <Card style={{borderColor:'white',}}>
+            <Card style={{borderColor:'white',border:0}}>
                 <CardItem>
                     <Left>
                         <Thumbnail 

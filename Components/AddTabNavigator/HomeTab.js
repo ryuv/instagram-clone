@@ -6,6 +6,7 @@ import {
  } from 'react-native'; 
 import {Container, Content, Icon} from 'native-base';
 import CardComponent from '../CardComponent';
+import StoryHeader from '../StoryHeader';
 
 export default class HomeTab extends Component {
     static navigationOptions = {
@@ -18,6 +19,10 @@ export default class HomeTab extends Component {
          return (
              <Container style={styles.container}>
                  <Content>
+                    {/*스토리 헤더*/}
+                     <StoryHeader/>
+                    
+                    {/*인스타 피드*/}
                      <CardComponent 
                         img="https://i.postimg.cc/ZK21p1LY/IMG-7069.jpg" 
                         data="귀요미 샤샤의 하루"/>
