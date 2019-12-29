@@ -7,20 +7,40 @@ import {
 import { Icon } from 'native-base';
 
 import { createAppContainer } from 'react-navigation';
-import { createBottomTabNavigator } from 'react-navigation-tabs';
+import { createMaterialTopTabNavigator, BottomTabBar } from 'react-navigation-tabs';
 import HomeTab from './AddTabNavigator/HomeTab';
 import AddMediaTab from './AddTabNavigator/AddMediaTab';
 import LikesTab from './AddTabNavigator/LikesTab';
 import ProfileTab from './AddTabNavigator/ProfileTab';
 import SearchTab from './AddTabNavigator/SearchTab';
 
-const AppTabNavigator = createBottomTabNavigator({
+const AppTabNavigator = createMaterialTopTabNavigator({
     HomeTab : {screen:HomeTab},
     SearchTab: {screen:SearchTab},
     AddMediaTab: {screen:AddMediaTab},
     LikesTab:{screen:LikesTab},
     ProfileTab:{screen:ProfileTab}
-})
+},{
+    animationEnabled:true,
+    tabBarPosition:"bottom",
+    tabBarOptions:{
+        style:{
+            ...Platform.select({
+                ios:{
+                    backgroundColor:"white"
+                }
+            })
+        },
+        activeTintColor: '#000',
+        inactiveTintColor : "#d1cece",
+        iconStyle: {height:50},
+        upperCaseLabel: false,
+        showLabel: false,
+        showIcon: true,
+    },
+    
+}
+)
 const AppTabContainet = createAppContainer(AppTabNavigator);
 
 export default class MainScreen extends Component {
