@@ -2,13 +2,21 @@ import React, { Component } from 'react';
 import { 
     View,
     Text,
-    StyleSheet    
+    StyleSheet,
  } from 'react-native'; 
-import {Container, Content, Icon} from 'native-base';
+import {
+    Container, 
+    Content, 
+    Icon,
+    Header,
+    Left,
+    Body,
+    Right} from 'native-base';
 import CardComponent from '../CardComponent';
 import StoryHeader from '../StoryHeader';
 
 export default class HomeTab extends Component {
+
     static navigationOptions = {
         tabBarIcon : ({tintColor}) => (
             <Icon name='ios-home' style={{color: tintColor}}/>
@@ -18,6 +26,12 @@ export default class HomeTab extends Component {
     render(){
          return (
              <Container style={styles.container}>
+                <Header>
+                    <Left><Icon name='ios-camera' style={{ paddingLeft:10 }}/></Left>
+                    <Body><Text>Instagram</Text></Body>
+                    <Right><Icon name='ios-send' style={{ paddingRight:10 }}/></Right>
+                </Header>
+
                  <Content>
                     {/*스토리 헤더*/}
                      <StoryHeader/>
