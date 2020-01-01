@@ -24,8 +24,8 @@ import { View,
                 <CardItem>
                     <Left>
                         <Thumbnail 
-                            source={{ uri: 'https://steemitimages.com/u/anpigon/avatar' }} 
-                            style={{width:30}}
+                            source={{ uri: 'https://i.postimg.cc/FKxgFnzj/2020-01-01-5-32-09.png' }} 
+                            style={{width:40,height:40}}
                         />
                         <Body>
                             <Text style={{fontSize:'16px', fontWeight:'700'}}>sujae</Text>
