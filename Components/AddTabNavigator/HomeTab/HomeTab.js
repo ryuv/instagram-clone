@@ -12,8 +12,8 @@ import {
     Left,
     Body,
     Right} from 'native-base';
-import CardComponent from '../CardComponent';
-import StoryHeader from '../StoryHeader';
+import CardComponent from './CardComponent';
+import StoryHeader from './StoryHeader';
 
 export default class HomeTab extends Component {
 

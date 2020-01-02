@@ -7,34 +7,34 @@ import {
 import { Icon } from 'native-base';
 
 import { createAppContainer } from 'react-navigation';
-import { createMaterialTopTabNavigator, BottomTabBar } from 'react-navigation-tabs';
-import HomeTab from './AddTabNavigator/HomeTab/HomeTab';
-import AddMediaTab from './AddTabNavigator/AddMediaTab';
-import LikesTab from './AddTabNavigator/LikesTab';
-import ProfileTab from './AddTabNavigator/ProfileTab/ProfileTab';
-import SearchTab from './AddTabNavigator/SearchTab';
+import { createMaterialTopTabNavigator } from 'react-navigation-tabs';
+import ProfileAlbum from './ProfileAlbum';
+import ProfileAlbums from './ProfileAlbums';
+
 
 const AppTabNavigator = createMaterialTopTabNavigator({
-    HomeTab : {screen:HomeTab},
-    SearchTab: {screen:SearchTab},
-    AddMediaTab: {screen:AddMediaTab},
-    LikesTab:{screen:LikesTab},
-    ProfileTab:{screen:ProfileTab}
+    ProfileAlbum:{screen:ProfileAlbum},
+    ProfileAlbums:{screen:ProfileAlbums}
 },{
     animationEnabled:true,
-    tabBarPosition:"bottom",
     tabBarOptions:{
         style:{
             ...Platform.select({
                 ios:{
                     backgroundColor:"white"
                 }
-            })
+            }),
+            marginTop: 10,
+            marginBottom: 0,
+            paddingBottom: 5,
+            borderColor: '#d1cece',
+            borderTopWidth: 0.5,
+
         },
-        indicatorStyle: {backgroundColor:'none'},
+        indicatorStyle: {backgroundColor:'none', borderBottomWidth: 1.2, borderColor:'gray'},
         activeTintColor: '#000',
         inactiveTintColor : "#d1cece",
-        iconStyle: {height:50},
+        iconStyle: {height:30},
         upperCaseLabel: false,
         showLabel: false,
         showIcon: true,
@@ -43,10 +43,7 @@ const AppTabNavigator = createMaterialTopTabNavigator({
 })
 const AppTabContainet = createAppContainer(AppTabNavigator);
 
-export default class MainScreen extends Component {
-    static navigationOptions = {
-        header:null
-    }
+export default class MyProfile extends Component {
 
     render(){
          return <AppTabContainet/>

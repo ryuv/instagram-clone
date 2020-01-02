@@ -4,7 +4,11 @@ import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 
 import MainScreen from './Components/MainScreen';
+
+
 class App extends React.Component{
+
+
   render(){
     return (
       <AppStackNavigator/>

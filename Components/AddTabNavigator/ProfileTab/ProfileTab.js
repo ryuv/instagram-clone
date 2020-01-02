@@ -16,6 +16,7 @@ import {
     Content,
     Button
 } from 'native-base';
+import MyProfile from './MyProfile';
 
 export default class ProfileTab extends Component {
     static navigationOptions = {
@@ -66,15 +67,17 @@ export default class ProfileTab extends Component {
                      </View>
 
                      <View style={{flexDirection:'row'}}>
-                         <Button bordered dark 
-                            style={{flex:1,height:30,marginLeft:10, justifyContent:'center'}}>
+                         <Button bordered
+                            style={{flex:1,height:30,marginLeft:20, justifyContent:'center',borderColor: 'gray',}}>
                              <Text>프로필 수정</Text>
                          </Button>
                          <Button bordered dark
-                            style={{flex:1,height:30,marginLeft:10,marginRight:10,justifyContent:'center'}}>
+                            style={{flex:1,height:30,marginLeft:20,marginRight:10,justifyContent:'center', borderColor: 'gray'}}>
                              <Text>홍보</Text>
                          </Button>
                      </View>
+
+                     <MyProfile/>
 
 
                  </Content>
