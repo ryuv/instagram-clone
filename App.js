@@ -8,7 +8,6 @@ import MainScreen from './Components/MainScreen';
 
 class App extends React.Component{
 
-
   render(){
     return (
       <AppStackNavigator/>
