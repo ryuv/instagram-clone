@@ -9,10 +9,10 @@ import { Icon } from 'native-base';
 import { createAppContainer } from 'react-navigation';
 import { createMaterialTopTabNavigator, BottomTabBar } from 'react-navigation-tabs';
 import HomeTab from './AddTabNavigator/HomeTab/HomeTab';
-import AddMediaTab from './AddTabNavigator/AddMediaTab';
-import LikesTab from './AddTabNavigator/LikesTab';
+import AddMediaTab from './AddTabNavigator/AddMediaTab/AddMediaTab';
+import LikesTab from './AddTabNavigator/LikesTab/LikesTab';
 import ProfileTab from './AddTabNavigator/ProfileTab/ProfileTab';
-import SearchTab from './AddTabNavigator/SearchTab';
+import SearchTab from './AddTabNavigator/SearchTab/SearchTab';
 
 const AppTabNavigator = createMaterialTopTabNavigator({
     HomeTab : {screen:HomeTab},
