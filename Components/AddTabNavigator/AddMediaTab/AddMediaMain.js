@@ -70,7 +70,7 @@ class AddMediaTab extends Component {
                     <Left style={{paddingLeft: 10}}></Left>
                     <Body><Text style={{fontSize:17, fontWeight: 'bold',}}>최근항목</Text></Body>
                     <Right style={{paddingRight: 10,}}>
-                        <TouchableHighlight onPress={() => this.props.navigation.push('AddWritePage')}>
+                        <TouchableHighlight onPress={() => this.props.navigation.push('AddWritePage',{Image : this.state.imgTop})}>
                             <Text style={{fontWeight:'bold', fontSize:15}} >다음</Text>
                         </TouchableHighlight>
                     </Right>
